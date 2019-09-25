@@ -16,6 +16,8 @@ class CreateNoteTable extends Migration
         Schema::create('note', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
+            $table->string('descripcion');
+            $table->boolean('favorito');
         });
     }
 

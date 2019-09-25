@@ -10,8 +10,9 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    protected $table = 'user'
-    protected $fillable = 'nombre'
+    protected $table = 'user';
+    protected $fillable = ['nombre'];
+    public $timestamps = false;
 
     public function notes(){
         return $this->hasMany('\App\Note');
